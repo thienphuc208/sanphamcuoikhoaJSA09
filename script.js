@@ -66,19 +66,19 @@ registerForm.addEventListener('submit', (e) => {
         // Chuyển hướng người dùng đến trang đăng nhập sau khi đăng ký thành công
         location.href = "login.html";
     }
-    //local strogare
-    let registerusername = "registerusername"
-    let registeremail = "registeremail"
-    let registerpwd = "registerpwd"
+    // //local strogare
+    // let registerusername = "registerusername"
+    // let registeremail = "registeremail"
+    // let registerpwd = "registerpwd"
 
-    // lưu data
-    let data = localStorage.setItem('User', registerusername)
-    let dataemail = localStorage.setItem('Email', registeremail)
-    let datapwd = localStorage.setItem('Pwd', registerpwd)
+    // // lưu data
+    // let data = localStorage.setItem('User', registerusername)
+    // let dataemail = localStorage.setItem('Email', registeremail)
+    // let datapwd = localStorage.setItem('Pwd', registerpwd)
 
-    //lấy data
-    let getItem = localStorage.getItem('registerusername')
-    console.log(getItem);
+    // //lấy data
+    // let getItem = localStorage.getItem('registerusername')
+    // console.log(getItem);
 
 });
 
