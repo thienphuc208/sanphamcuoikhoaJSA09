@@ -11,74 +11,75 @@ registerBtn.addEventListener("click", () => {
 loginBtn.addEventListener("click", () => {
     container.classList.remove('active');
 });
-// xử lý đăng nhập
-let email = document.getElementById('email');
-let pwd = document.getElementById('pwd');
-let form = document.getElementById('loginForm');
-form.addEventListener('submit', (e) => {
+
+// Xử lý Đăng nhập
+const emailInput = document.getElementById('email');
+const pwdInput = document.getElementById('pwd');
+const loginForm = document.getElementById('loginForm');
+
+loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    //nhập thông tin
-    let email_val = email.value;
-    let pwd_val = pwd.value;
-    console.log(email_val, pwd_val);
+
+    const email_val = emailInput.value;
+    const pwd_val = pwdInput.value;
+
+    // Kiểm tra ô trống
     if (email_val === '' || pwd_val === '') {
         alert('Please fill all the fields');
+        return;
     }
-    //phần đăng nhập của admin
-    else if (email_val === 'admin@gmail.com' && pwd_val === 'admin') {
+
+    // Admin đăng nhập
+    if (email_val === 'admin@gmail.com' && pwd_val === 'admin') {
         alert('Login successful');
         location.href = "mainscreen.html";
+        return;
     }
 
-    else if (pwd_val.length < 6) {
+    // Lấy dữ liệu từ localStorage
+    const storedEmail = localStorage.getItem("registeremail");
+    const storedPwd = localStorage.getItem("registerpwd");
+
+    // Kiểm tra dữ liệu
+    if (email_val === storedEmail && pwd_val === storedPwd) {
+        alert("Login successful");
+        location.href = "mainscreen.html";
+    } else if (pwd_val.length < 6) {
         alert('Password must be at least 6 characters');
-    }
-    else {
+    } else {
         alert('Invalid email or password');
     }
-})
-
-// Xử lý Đăng ký
-let registerusername = document.getElementById('registerusername');
-let registeremail = document.getElementById('registeremail');
-let registerpwd = document.getElementById('registerpwd');
-let registerForm = document.getElementById('registerForm');
-
-registerForm.addEventListener('submit', (e) => {
-    e.preventDefault(); // Ngừng hành động gửi form mặc định
-
-    // Lấy giá trị các trường trong form đăng ký
-    let registerusername_val = registerusername.value;
-    let registeremail_val = registeremail.value;
-    let registerpwd_val = registerpwd.value;
-
-    // console.log(registerusername_val, registeremail_val, registerpwd_val);
-    if (registerusername_val === '' || registeremail_val === '' || registerpwd_val === '') {
-        alert('Please fill all the fields');
-    }
-    else if (registerpwd_val.length < 6) {
-        alert('Password must be at least 6 characters');
-    }
-    else {
-        // đăng ký thành công, có thể gửi dữ liệu tới server ở đây
-        alert('Registration successful!');
-        console.log("Registered user:", registeremail_val, registeremail_val, registerpwd_val);
-        // Chuyển hướng người dùng đến trang đăng nhập sau khi đăng ký thành công
-        location.href = "login.html";
-    }
-    // //local strogare
-    // let registerusername = "registerusername"
-    // let registeremail = "registeremail"
-    // let registerpwd = "registerpwd"
-
-    // // lưu data
-    // let data = localStorage.setItem('User', registerusername)
-    // let dataemail = localStorage.setItem('Email', registeremail)
-    // let datapwd = localStorage.setItem('Pwd', registerpwd)
-
-    // //lấy data
-    // let getItem = localStorage.getItem('registerusername')
-    // console.log(getItem);
-
 });
 
+// Xử lý Đăng ký
+const registerusername = document.getElementById('registerusername');
+const registeremail = document.getElementById('registeremail');
+const registerpwd = document.getElementById('registerpwd');
+const registerForm = document.getElementById('registerForm');
+
+registerForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const username_val = registerusername.value;
+    const email_val = registeremail.value;
+    const pwd_val = registerpwd.value;
+
+    if (username_val === '' || email_val === '' || pwd_val === '') {
+        alert('Please fill all the fields');
+        return;
+    }
+
+    if (pwd_val.length < 6) {
+        alert('Password must be at least 6 characters');
+        return;
+    }
+
+    // Lưu dữ liệu vào localStorage
+    localStorage.setItem("registerusername", username_val);
+    localStorage.setItem("registeremail", email_val);
+    localStorage.setItem("registerpwd", pwd_val);
+
+    alert('Registration successful!');
+    console.log("Registered user:", username_val, email_val, pwd_val);
+    location.href = "login.html";
+});
