@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(90deg, white, #151515);
+}
+
+form.d-flex {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+form.d-flex .form-control {
+  border: none;
+  border-radius: 25px 0 0 25px;
+  padding: 10px 15px;
+  box-shadow: none;
+  outline: none;
+  flex: 1;
+  margin-right: 0 !important;
+}
+
+form.d-flex .btn {
+  border-radius: 0 25px 25px 0;
+  border: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+  background-color: white;
+  color: black;
+}
+
+/* form.d-flex .btn:hover {
+  background-color: #0056b3;
+} */
+
+.card-body>a {
+  padding: 10px 50px;
+  background-color: white;
+  color: black;
+  font-weight: 100%;
+  border-radius: 100px;
+}
+
+.card {
+  border-radius: 30px;
+}
+
+.logo-avatar {
+  width: 60px;
+  height: 40px;
+  border-radius: 200px;
+}
+
+.money {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card-body {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.nike-footer {
+  background-color: #111;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+  padding: 40px 0 20px;
+  margin: 30px 0 0;
+  
+}
+
+.nike-footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.nike-footer-section {
+  flex: 1 1 200px;
+  margin: 10px 0;
+}
+
+.nike-footer-section h4 {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.nike-footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nike-footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.nike-footer-section a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nike-footer-section a:hover {
+  color: #fff;
+}
+
+.nike-footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #777;
+}
+
+.nike-logo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+
+
+@media (max-width: 768px) {
+  .nike-footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nike-footer-section {
+    text-align: center;
+  }
+}

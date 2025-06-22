@@ -100,3 +100,50 @@ registerForm.addEventListener('submit', (e) => {
     location.href = "login.html";
 
 });
+
+// // Kiểm tra trạng thái đăng nhập khi load trang
+// window.onload = function() {
+//     const isLoggedIn = localStorage.getItem("loggedInUser");
+//     if (isLoggedIn) {
+//         document.getElementById("loginItem").style.display = "none";
+//         document.getElementById("logoutItem").style.display = "block";
+//     } else {
+//         document.getElementById("loginItem").style.display = "block";
+//         document.getElementById("logoutItem").style.display = "none";
+//     }
+// }
+
+// // Xử lý đăng xuất
+// const logoutBtn = document.getElementById("logoutItem");        
+// logoutBtn.addEventListener("click", () => {
+//     localStorage.removeItem("loggedInUser");
+//     alert("Logged out successfully");
+//     location.href = "login.html";
+// });
+// // Lấy thông tin người dùng từ localStorage
+// const userData = localStorage.getItem("userData");
+// if (userData) {
+//     const parsedData = JSON.parse(userData);
+//     console.log("User Data:", parsedData);
+// }   
+// else {
+//     console.log("No user data found in localStorage.");
+// }   
+// // Lấy thông tin người dùng từ localStorage
+// const userDataKey = "userData" + localStorage.getItem("registerusername");
+// const userDataFromStorage = localStorage.getItem(userDataKey);
+// if (userDataFromStorage) {
+//     const parsedUserData = JSON.parse(userDataFromStorage);
+//     console.log("User Data from localStorage:", parsedUserData);
+// }
+// // Hiển thị thông tin người dùng trên trang chính
+// const userInfo = document.getElementById("userInfo");   
+// if (parsedUserData) {
+//     userInfo.innerHTML = `
+//         <h2>Welcome, ${parsedUserData.username}!</h2>
+//         <p>Email: ${parsedUserData.email}</p>
+//     `;
+// }
+// // Hiển thị thông tin người dùng trên trang chính
+// const userInfoMain = document.getElementById("userInfoMain");
+
