@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIKE</title>
+    <title>ADIDAS</title>
     <link rel="icon" type="img/png"
-    href="https://media.about.nike.com/image-downloads/cf68f541-fc92-4373-91cb-086ae0fe2f88/002-nike-logos-swoosh-white.jpg">
+        href="https://img.favpng.com/6/24/3/adidas-logo-adidas-brand-logo-4a5upQZH_t.jpg">
     <link rel="stylesheet" href="login.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -16,9 +16,9 @@
 
         <div class="form-box login">
             <form id="loginForm" action="">
-                <h1>Login</h1>r
+                <h1>Login</h1>
                 <div class="input-box">
-                    <input type="text" id="email" placeholder="Email" required>
+                    <input type="email" id="email" placeholder="Email" required>
                     <i class='bx bxs-user'></i>
                 </div>
                 <div class="input-box">
@@ -66,20 +66,39 @@
         </div>
         <div class="toggle-box">
             <div class="toggle-panel toggle-left">
-                <h1>Hello, Welcome!</h1>    
+                <h1>Hello, Welcome!</h1>
                 <p>Don't have an account?</p>
-                <button class="btn register-btn">Register</button>
+                <button type="button" id="registerBtn" class="btn register-btn">Register</button>
             </div>
             <div class="toggle-panel toggle-right">
                 <h1>Welcome Back!</h1>
                 <p>Already have an account?</p>
-                <button class="btn login-btn">Login</button>
+                <button type="button" class="btn login-btn">Login</button>
             </div>
         </div>
     </div>
 
 
-    <script src="script.js"></script>
+
 </body>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const loginForm = document.getElementById('loginForm');
+    const registerForm = document.getElementById('registerForm');
+    const registerBtn = document.getElementById('registerBtn');
+    const loginBtn = document.querySelector('.login-btn');
+
+    registerBtn.addEventListener('click', function () {
+        loginForm.style.display = 'none';
+        registerForm.style.display = 'block';
+    });
+
+    loginBtn.addEventListener('click', function () {
+        registerForm.style.display = 'none';
+        loginForm.style.display = 'block';
+    });
+});
+</script>
+<script src="script.js"></script>
 
 </html>

@@ -2,7 +2,7 @@ const container = document.querySelector(".container");
 const registerBtn = document.querySelector(".register-btn");
 const loginBtn = document.querySelector(".login-btn");
 
-registerBtn.addEventListener("click ", () => {
+registerBtn.addEventListener("click", () => {
     container.classList.add('active');
 });
 
@@ -39,6 +39,11 @@ loginForm.addEventListener('submit', (e) => {
     // Lấy dữ liệu từ localStorage
     const storedEmail = localStorage.getItem("registeremail");
     const storedPwd = localStorage.getItem("registerpwd");
+    // Kiểm tra xem dữ liệu đã được lưu chưa
+    if (!storedEmail || !storedPwd) {
+        alert('No registered user found. Please register first.');
+        return;
+    }
 
     // Kiểm tra dữ liệu
     if (email_val === storedEmail && pwd_val === storedPwd) {
@@ -80,6 +85,18 @@ registerForm.addEventListener('submit', (e) => {
     localStorage.setItem("registerpwd", pwd_val);
 
     alert('Registration successful!');
+    const userData = {
+        username: username_val,
+        email: email_val,
+        password: pwd_val
+    };
+
+    // Chuyển đổi đối tượng userdata thành chuỗi JSON và lưu vào localStorage
+    const userDataJSON = JSON.stringify(userData);
+    // Lưu chuỗi JSON vào localStorage
+    localStorage.setItem("userData" + userData.username, userDataJSON );
+    // In thông tin đăng ký ra console
     console.log("Registered user:", username_val, email_val, pwd_val);
     location.href = "login.html";
+
 });
