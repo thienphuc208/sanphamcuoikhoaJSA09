@@ -43,20 +43,24 @@
                             <a href="#" class="nav-link">Sale</a>
                         </li>
                         <li class="nav-item" id="loginItem">
-                            <div><a href="login.html" class="nav-link">LogIn</a></div>
+                            <a href="login.html" class="nav-link">LogIn</a>
                         </li>
                         <li class="nav-item" id="logoutItem" style="display: none;">
-                            <div><a href="#" class="nav-link" onclick="logout()">LogOut</a></div>
+                            <a href="#" class="nav-link" onclick="logout()">LogOut</a>
                         </li>
                     </ul>
 
-                </div>
-                <form class="d-flex mb-3" onsubmit="return false;">
+                </div> 
+
+             <div class="searchhh" id="searchContainer">
+                   <form class="d-flex mb-3" onsubmit="searchProducts(); return false;">
                     <input id="searchInput" class="form-control me-2" type="text" placeholder="Tìm sản phẩm...">
                     <button class="btn btn-primary" type="button" onclick="searchProducts()">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
+             </div>
+
 
             </div>
         </nav>
@@ -212,27 +216,7 @@
             <p>&copy; 2025 Nike, Inc. Mọi quyền được bảo lưu.</p>
         </div>
     </footer>
-
-    <script>
-        // Kiểm tra trạng thái đăng nhập khi load trang
-    window.onload = function() {
-      const isLoggedIn = localStorage.getItem("loggedInUser");
-      if (isLoggedIn) {
-        document.getElementById("loginItem").style.display = "none";
-        document.getElementById("logoutItem").style.display = "block";
-      } else {
-        document.getElementById("loginItem").style.display = "block";
-        document.getElementById("logoutItem").style.display = "none";
-      }
-    }
-
-    // Hàm xử lý LogOut
-    function logout() {
-      localStorage.removeItem("loggedInUser");
-      alert("Bạn đã đăng xuất!");
-      location.href = "login.html";
-    }
-    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

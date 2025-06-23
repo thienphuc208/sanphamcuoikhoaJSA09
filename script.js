@@ -17,6 +17,15 @@ const emailInput = document.getElementById('email');
 const pwdInput = document.getElementById('pwd');
 const loginForm = document.getElementById('loginForm');
 
+// Gọi hàm khi trang vừa load
+window.onload = function () {
+    updateLoginStatus();
+}
+
+
+
+
+
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -32,6 +41,7 @@ loginForm.addEventListener('submit', (e) => {
     // Admin đăng nhập
     if (email_val === 'admin@gmail.com' && pwd_val === 'admin') {
         alert('Login successful');
+        localStorage.setItem("isLoggedIn", "true");
         location.href = "mainscreen.html";
         return;
     }
@@ -48,6 +58,7 @@ loginForm.addEventListener('submit', (e) => {
     // Kiểm tra dữ liệu
     if (email_val === storedEmail && pwd_val === storedPwd) {
         alert("Login successful");
+        localStorage.setItem("isLoggedIn", "true");
         location.href = "mainscreen.html";
     } else if (pwd_val.length < 6) {
         alert('Password must be at least 6 characters');
@@ -100,50 +111,25 @@ registerForm.addEventListener('submit', (e) => {
     location.href = "login.html";
 
 });
+// tìm kiếm sản phẩm
+function searchProducts() {
+    const keyword = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
 
-// // Kiểm tra trạng thái đăng nhập khi load trang
-// window.onload = function() {
-//     const isLoggedIn = localStorage.getItem("loggedInUser");
-//     if (isLoggedIn) {
-//         document.getElementById("loginItem").style.display = "none";
-//         document.getElementById("logoutItem").style.display = "block";
-//     } else {
-//         document.getElementById("loginItem").style.display = "block";
-//         document.getElementById("logoutItem").style.display = "none";
-//     }
-// }
+    cards.forEach(card => {
+        const title = card.querySelector('.card-title').textContent.toLowerCase();
+        if (title.includes(keyword)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
 
-// // Xử lý đăng xuất
-// const logoutBtn = document.getElementById("logoutItem");        
-// logoutBtn.addEventListener("click", () => {
-//     localStorage.removeItem("loggedInUser");
-//     alert("Logged out successfully");
-//     location.href = "login.html";
-// });
-// // Lấy thông tin người dùng từ localStorage
-// const userData = localStorage.getItem("userData");
-// if (userData) {
-//     const parsedData = JSON.parse(userData);
-//     console.log("User Data:", parsedData);
-// }   
-// else {
-//     console.log("No user data found in localStorage.");
-// }   
-// // Lấy thông tin người dùng từ localStorage
-// const userDataKey = "userData" + localStorage.getItem("registerusername");
-// const userDataFromStorage = localStorage.getItem(userDataKey);
-// if (userDataFromStorage) {
-//     const parsedUserData = JSON.parse(userDataFromStorage);
-//     console.log("User Data from localStorage:", parsedUserData);
-// }
-// // Hiển thị thông tin người dùng trên trang chính
-// const userInfo = document.getElementById("userInfo");   
-// if (parsedUserData) {
-//     userInfo.innerHTML = `
-//         <h2>Welcome, ${parsedUserData.username}!</h2>
-//         <p>Email: ${parsedUserData.email}</p>
-//     `;
-// }
-// // Hiển thị thông tin người dùng trên trang chính
-// const userInfoMain = document.getElementById("userInfoMain");
+
+
+
+
+
+
 
