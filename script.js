@@ -105,7 +105,7 @@ registerForm.addEventListener('submit', (e) => {
     // Chuyển đổi đối tượng userdata thành chuỗi JSON và lưu vào localStorage
     const userDataJSON = JSON.stringify(userData);
     // Lưu chuỗi JSON vào localStorage
-    localStorage.setItem("userData" + userData.username, userDataJSON );
+    localStorage.setItem("userData" + userData.username, userDataJSON);
     // In thông tin đăng ký ra console
     console.log("Registered user:", username_val, email_val, pwd_val);
     location.href = "login.html";
@@ -125,11 +125,23 @@ function searchProducts() {
         }
     });
 }
-
-
-
-
-
-
-
-
+fetch('https://api.escuelajs.co/api/v1/products')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        // Hiển thị sản phẩm lên giao diện
+        const productContainer = document.getElementById('productContainer');
+        data.forEach(product => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <img src="${product.images[0]}" alt="${product.title}" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">${product.title}</h5>
+                    <p class="card-price">${product.price} USD</p>
+                </div>
+            `;
+            productContainer.appendChild(card);
+        });
+    })
+    .catch(error => console.error('Error fetching products:', error));
