@@ -17,12 +17,6 @@ const emailInput = document.getElementById('email');
 const pwdInput = document.getElementById('pwd');
 const loginForm = document.getElementById('loginForm');
 
-// Gọi hàm khi trang vừa load
-window.onload = function () {
-    updateLoginStatus();
-}
-
-
 
 
 
@@ -38,27 +32,21 @@ loginForm.addEventListener('submit', (e) => {
         return;
     }
 
-    // Admin đăng nhập
-    if (email_val === 'admin@gmail.com' && pwd_val === 'admin') {
-        alert('Login successful');
-        localStorage.setItem("isLoggedIn", "true");
-        location.href = "mainscreen.html";
-        return;
-    }
-
     // Lấy dữ liệu từ localStorage
-    const storedEmail = localStorage.getItem("registeremail");
-    const storedPwd = localStorage.getItem("registerpwd");
-    // Kiểm tra xem dữ liệu đã được lưu chưa
-    if (!storedEmail || !storedPwd) {
-        alert('No registered user found. Please register first.');
+    const storedUserData = localStorage.getItem("userData" + email_val);
+    if (!storedUserData) {
+        alert('User not found. Please register first.');
         return;
     }
-
+    // chuyển đổi chuỗi JSON thành đối tượng
+    const userData = JSON.parse(storedUserData);
+    const storedEmail = userData.email;
+    const storedPwd = userData.password;
+    
     // Kiểm tra dữ liệu
     if (email_val === storedEmail && pwd_val === storedPwd) {
         alert("Login successful");
-        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("currentUser", JSON.stringify({ email: email_val, password: pwd_val }));
         location.href = "mainscreen.html";
     } else if (pwd_val.length < 6) {
         alert('Password must be at least 6 characters');
@@ -90,11 +78,6 @@ registerForm.addEventListener('submit', (e) => {
         return;
     }
 
-    // Lưu dữ liệu vào localStorage
-    localStorage.setItem("registerusername", username_val);
-    localStorage.setItem("registeremail", email_val);
-    localStorage.setItem("registerpwd", pwd_val);
-
     alert('Registration successful!');
     const userData = {
         username: username_val,
@@ -105,7 +88,7 @@ registerForm.addEventListener('submit', (e) => {
     // Chuyển đổi đối tượng userdata thành chuỗi JSON và lưu vào localStorage
     const userDataJSON = JSON.stringify(userData);
     // Lưu chuỗi JSON vào localStorage
-    localStorage.setItem("userData" + userData.username, userDataJSON);
+    localStorage.setItem("userData" + email_val, userDataJSON);
     // In thông tin đăng ký ra console
     console.log("Registered user:", username_val, email_val, pwd_val);
     location.href = "login.html";
@@ -125,6 +108,7 @@ function searchProducts() {
         }
     });
 }
+//api sản phẩm
 fetch('https://api.escuelajs.co/api/v1/products')
     .then(response => response.json())
     .then(data => {
@@ -145,3 +129,11 @@ fetch('https://api.escuelajs.co/api/v1/products')
         });
     })
     .catch(error => console.error('Error fetching products:', error));
+
+   // Xử lý đăng xuất
+   function logout() {
+    localStorage.removeItem("currentUser");
+    alert("Logged out successfully");
+    location.href = "mainscreen.html";
+}
+

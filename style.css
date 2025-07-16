@@ -172,3 +172,10 @@ form.d-flex .btn {
   align-items: center;
   height: 100vh;
 }
+.active {
+  display: block;
+}
+
+#loginItem, #logoutItem {
+  display: none;
+}
