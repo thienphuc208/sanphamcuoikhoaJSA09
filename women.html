@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +12,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <div class="container-fluid">bv 
+            <div class="container-fluid">bv
                 <a href="mainscreen.html" class="nav-brand">
                     <img class="logo-avatar"
                         src="https://upload.wikimedia.org/wikipedia/commons/3/36/Logo_nike_principal.jpg" alt="AVATAR"
@@ -26,43 +28,161 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">New & Featured</a>
+                            <a href="./newfeature.html" class="nav-link">New & Featured</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Men</a>
+                            <a href="./men.html" class="nav-link">Men</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Women</a>
+                            <a href="./women.html" class="nav-link">Women</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Kids</a>
+                            <a href="./kids.html" class="nav-link">Kids</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Sale</a>
+                            <a href="./sale.html" class="nav-link">Sale</a>
                         </li>
                         <li class="nav-item" id="loginItem">
-                            <a href="login.html" class="nav-link">LogIn</a>
+                            <a href="./login.html" class="nav-link">LogIn</a>
                         </li>
                         <li class="nav-item" id="logoutItem">
                             <a href="#" class="nav-link" onclick="logout()">LogOut</a>
                         </li>
                     </ul>
 
-                </div> 
+                </div>
 
-             <div class="searchhh" id="searchContainer">
-                   <form class="d-flex mb-3" onsubmit="searchProducts(); return false;">
-                    <input id="searchInput" class="form-control me-2" type="text" placeholder="Tìm sản phẩm...">
-                    <button class="btn btn-primary" type="button" onclick="searchProducts()">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </form>
-             </div>
+                <div class="searchhh" id="searchContainer">
+                    <form class="d-flex mb-3" onsubmit="searchProducts(); return false;">
+                        <input id="searchInput" class="form-control me-2" type="text" placeholder="Tìm sản phẩm...">
+                        <button class="btn btn-primary" type="button" onclick="searchProducts()">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
 
 
             </div>
         </nav>
     </header>
+    <h1 class="text-center my-4" id="collectionTitle">NIKE Women's Collection</h1>
+    <div class="container-fluid mt-3 d-flex justify-content-around">
+        <div class="card" style="width:400px">
+            <img class="card-img-top"
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/660f458e-5922-4291-a553-39ceeee82530/W+NIKE+METCON+10.png"
+                alt="Card image" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title">Nike Metcon 10</h4>
+                <p class="card-text">Women's Shoes</p>
+                <p class="color">4 colours</p>
+                <p class="money">4,409,000₫</p>
+                <a href="product/metcon.html" class="btn btn-primary">View Details</a>
+            </div>
+        </div>
+        <div class="card" style="width:400px">
+            <img class="card-img-top"
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a64cbae6-fc23-459e-bb62-2afacebe6922/W+NIKE+FREE+METCON+6.png"
+                alt="Card image" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title">Nike Free Metcon 6</h4>
+                <p class="card-text">Women's Shoes</p>
+                <p class="color">6 colours</p>
+                <p class="money">3,519,000₫</p>
+                <a href="product/freemetcon.html" class="btn btn-primary">View Details</a>
+            </div>
+        </div>
+        <div class="card" style="width:400px">
+            <img class="card-img-top"
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a504e2c6-dcc0-41b9-bb00-3648c3906ae2/WMNS+AIR+FORCE+1+%2707+LX.png"
+                alt="Card image" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title">Nike Air Force 1 '07 LX</h4>
+                <p class="card-text">Women's Shoes</p>
+                <p class="color"> 1 colour</p>
+                <p class="money">3,829,000₫</p>
+                <a href="product/airforce.html" class="btn btn-primary">View Details</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-3 d-flex justify-content-around" id="container1">
+        <div class="card" style="width:400px">
+            <img class="card-img-top"
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/06bdcd0d-8d6a-4225-8f55-c6f1ca1f5c80/NIKE+DUNK+LOW+SE+%28GS%29.png"
+                alt="Card image" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title">Nike Dunk Low SE</h4>
+                <p class="card-text">Women's Shoes</p>
+                <p class="color"> 1 colour</p>
+                <p class="money">2,679,000₫</p>
+                <a href="product/dunk.html" class="btn btn-primary">View Details</a>
+            </div>
+        </div>
+
+        <div class="card" style="width:400px">
+            <img class="card-img-top"
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/084ccffe-0c51-4441-b6c3-04f36daf244b/W+AIR+MAX+DN8.png"
+                alt="Card image" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title">Nike Air Max Dn8</h4>
+                <p class="card-text">Women's Shoes</p>
+                <p class="color"> 1 colour</p>
+                <p class="money">5,589,000₫</p>
+                <a href="product/airmax.html" class="btn btn-primary">View Details</a>
+            </div>
+        </div>
+
+        <div class="card" style="width:400px">
+            <img class="card-img-top"
+                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3c109c3b-ad52-424e-b22b-8a9036527eb0/W+AIR+MAX+ISLA+SANDAL.png"
+                alt="Card image" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title">Nike Air Max Isla</h4>
+                <p class="card-text">Women's Sandals</p>
+                <p class="color"> 1 colour</p>
+                <p class="money">2,929,000₫</p>
+                <a href="product/isl.html" class="btn btn-primary">View Details</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="nike-footer" id="footer">
+        <div class="nike-footer-container">
+            <div class="nike-footer-section logo-section">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike Logo"
+                    class="nike-logo" />
+            </div>
+            <div class="nike-footer-section">
+                <h4>Sản phẩm</h4>
+                <ul>
+                    <li><a href="#">Giày nam</a></li>
+                    <li><a href="#">Giày nữ</a></li>
+                    <li><a href="#">Phụ kiện</a></li>
+                </ul>
+            </div>
+            <div class="nike-footer-section">
+                <h4>Hỗ trợ</h4>
+                <ul>
+                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                </ul>
+            </div>
+            <div class="nike-footer-section">
+                <h4>Theo dõi Nike</h4>
+                <ul class="socials">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nike-footer-bottom">
+            <p>&copy; 2025 Nike, Inc. Mọi quyền được bảo lưu.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 <script>
     // Kiểm tra xem người dùng đã đăng nhập hay chưa
@@ -74,4 +194,5 @@
         document.getElementById("logoutItem").style.display = "none";
     }
 </script>
+
 </html>

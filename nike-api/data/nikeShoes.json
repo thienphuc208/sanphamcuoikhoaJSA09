@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Nike Air Force 1",
+    "price": 146,
+    "image": "https://cdn.vortexs.io/api/images/7d3e5420-f29a-4c82-9bc0-3a03f0a8a327/1920/w/giay-nike-air-force-1-low-07-stadium-green-dd8959-110.jpeg",
+    "description": "Classic style with modern comfort.",
+    "details": {
+      "material": "Premium Leather",
+      "color": "White / Stadium Green",
+      "sizes": [
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "weight": "420g",
+      "madeIn": "Vietnam"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Nike Air Max 270",
+    "price": 150,
+    "image": "https://cdn.vortexs.io/api/images/352ca714-b262-4eca-9289-0b557e4d0f8e/1920/w/giay-nike-air-max-270-se-fj5450-100.jpeg",
+    "description": "Max Air cushioning for all-day comfort.",
+    "details": {
+      "material": "Textile and Synthetic",
+      "color": "White / Blue Tint",
+      "sizes": [
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "weight": "380g",
+      "madeIn": "Indonesia"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Nike Dunk Low",
+    "price": 110,
+    "image": "https://cdn.vortexs.io/api/images/9e260acf-6bd0-47c1-9d8f-51b87604a87b/1920/w/giay-nike-dunk-low-retro-maroon-white-dv0831-102.jpeg",
+    "description": "Iconic design reborn for everyday wear.",
+    "details": {
+      "material": "Suede and Canvas",
+      "color": "Maroon / White",
+      "sizes": [
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "weight": "390g",
+      "madeIn": "China"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Nike Blazer Mid '77 Vintage",
+    "price": 150,
+    "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/fb7eda3c-5ac8-4d05-a18f-1c2c5e82e36e/BLAZER+MID+%2777+VNTG.png",
+    "description": "Classic style with modern comfort.",
+    "details": {
+      "material": "Premium Leather",
+      "color": "White / Stadium Green",
+      "sizes": [
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "weight": "420g",
+      "madeIn": "Vietnam"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Nike Air Max Dn8",
+    "price": 200,
+    "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/084ccffe-0c51-4441-b6c3-04f36daf244b/W+AIR+MAX+DN8.png",
+    "description": "Max Air cushioning for all-day comfort.",
+    "details": {
+      "material": "Textile and Synthetic",
+      "color": "White / Blue Tint",
+      "sizes": [
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "weight": "380g",
+      "madeIn": "Indonesia"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Nike Air Max Isla",
+    "price": 150,
+    "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3c109c3b-ad52-424e-b22b-8a9036527eb0/W+AIR+MAX+ISLA+SANDAL.png",
+    "description": "Iconic design reborn for everyday wear.",
+    "details": {
+      "material": "Suede and Canvas",
+      "color": "Maroon / White",
+      "sizes": [
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "weight": "390g",
+      "madeIn": "China"
+    }
+  }
+]

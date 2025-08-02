@@ -28,22 +28,22 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">New & Featured</a>
+                            <a href="./newfeature.html" class="nav-link">New & Featured</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Men</a>
+                            <a href="./men.html" class="nav-link">Men</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Women</a>
+                            <a href="./women.html" class="nav-link">Women</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Kids</a>
+                            <a href="./kids.html" class="nav-link">Kids</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Sale</a>
+                            <a href="./sale.html" class="nav-link">Sale</a>
                         </li>
                         <li class="nav-item" id="loginItem">
-                            <a href="login.html" class="nav-link">LogIn</a>
+                            <a href="./login.html" class="nav-link">LogIn</a>
                         </li>
                         <li class="nav-item" id="logoutItem">
                             <a href="#" class="nav-link" onclick="logout()">LogOut</a>
@@ -66,10 +66,10 @@
         </nav>
     </header>
     <!-- Body -->
-    <h1>New & Featured</h1>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
+    <h1 class="text-center my-4" id="collectionTitle">New & Featured</h1>
+    <div class="container mt-4">
+        <div id="productContainer">
+            <!-- <div class="col-md-4">
                 <div class="card">
                     <img src="https://via.placeholder.com/150" class="card-img-top" alt="Product Image">
                     <div class="card-body">
@@ -88,11 +88,48 @@
                         <a href="#" class="btn btn-primary">View Details</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
+    <!-- Footer -->
+    <footer class="nike-footer" id="footer">
+        <div class="nike-footer-container">
+            <div class="nike-footer-section logo-section">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike Logo"
+                    class="nike-logo" />
+            </div>
+            <div class="nike-footer-section">
+                <h4>Sản phẩm</h4>
+                <ul>
+                    <li><a href="#">Giày nam</a></li>
+                    <li><a href="#">Giày nữ</a></li>
+                    <li><a href="#">Phụ kiện</a></li>
+                </ul>
+            </div>
+            <div class="nike-footer-section">
+                <h4>Hỗ trợ</h4>
+                <ul>
+                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                </ul>
+            </div>
+            <div class="nike-footer-section">
+                <h4>Theo dõi Nike</h4>
+                <ul class="socials">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nike-footer-bottom">
+            <p>&copy; 2025 Nike, Inc. Mọi quyền được bảo lưu.</p>
+        </div>
+    </footer>
 
-
+    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 <script>
     // Kiểm tra xem người dùng đã đăng nhập hay chưa

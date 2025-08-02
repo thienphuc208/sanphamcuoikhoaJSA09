@@ -42,7 +42,7 @@ loginForm.addEventListener('submit', (e) => {
     const userData = JSON.parse(storedUserData);
     const storedEmail = userData.email;
     const storedPwd = userData.password;
-    
+
     // Kiểm tra dữ liệu
     if (email_val === storedEmail && pwd_val === storedPwd) {
         alert("Login successful");
@@ -94,46 +94,3 @@ registerForm.addEventListener('submit', (e) => {
     location.href = "login.html";
 
 });
-// tìm kiếm sản phẩm
-function searchProducts() {
-    const keyword = document.getElementById('searchInput').value.toLowerCase();
-    const cards = document.querySelectorAll('.card');
-
-    cards.forEach(card => {
-        const title = card.querySelector('.card-title').textContent.toLowerCase();
-        if (title.includes(keyword)) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
-    });
-}
-//api sản phẩm
-fetch('https://api.escuelajs.co/api/v1/products')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        // Hiển thị sản phẩm lên giao diện
-        const productContainer = document.getElementById('productContainer');
-        data.forEach(product => {
-            const card = document.createElement('div');
-            card.className = 'card';
-            card.innerHTML = `
-                <img src="${product.images[0]}" alt="${product.title}" class="card-img">
-                <div class="card-body">
-                    <h5 class="card-title">${product.title}</h5>
-                    <p class="card-price">${product.price} USD</p>
-                </div>
-            `;
-            productContainer.appendChild(card);
-        });
-    })
-    .catch(error => console.error('Error fetching products:', error));
-
-   // Xử lý đăng xuất
-   function logout() {
-    localStorage.removeItem("currentUser");
-    alert("Logged out successfully");
-    location.href = "mainscreen.html";
-}
-

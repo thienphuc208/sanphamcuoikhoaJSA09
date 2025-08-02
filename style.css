@@ -21,12 +21,12 @@ form.d-flex {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.searchContaine{
- justify-content: center;
+.searchContainer {
+  justify-content: center;
   align-items: center;
-    display: flex;
-    height: 100vh;
-    margin: 10;
+  display: flex;
+  height: 100vh;
+  margin: 10;
   padding: 20px;
 }
 
@@ -44,7 +44,7 @@ form.d-flex .btn {
   border-radius: 0 25px 25px 0;
   border: none;
   padding: 10px 15px;
-  /* margin: 10px 0 0; */
+
   transition: background-color 0.3s ease;
   background-color: white;
   color: black;
@@ -90,7 +90,7 @@ form.d-flex .btn {
   font-family: 'Helvetica Neue', sans-serif;
   padding: 40px 0 20px;
   margin: 30px 0 0;
-  
+
 }
 
 .nike-footer-container {
@@ -160,22 +160,39 @@ form.d-flex .btn {
   }
 }
 
-.navbarNav{
+.navbarNav {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.loginSection{
+.loginSection {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
+
 .active {
   display: block;
 }
 
-#loginItem, #logoutItem {
+#loginItem,
+#logoutItem {
   display: none;
+}
+
+.card {
+    height: 100%;
+}
+
+#productDetail {
+  padding: 30px;
+}
+
+#collectionTitle {
+  color: blue;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }

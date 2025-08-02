@@ -11,41 +11,42 @@ body {
     background: linear-gradient(90deg, white, #151515);
 }
 
-.container{
+.container {
     display: flex;
     margin: 10px;
-    background-color: gray;border-radius: 10px;
+    background-color: gray;
+    border-radius: 10px;
 }
 
-.img-product{
+.img-product {
     margin: 20px;
 }
 
-.product-info{
+.product-info {
     margin: 20px;
     margin-left: 30px;
     padding: 20px;
     background-color: white;
     border-radius: 30px;
 
-    
+
 }
 
-.sizes-wrap{
+.sizes-wrap {
     margin-bottom: 10px;
 }
 
-.size-item{
+.size-item {
     padding: 15px;
     border-radius: 10px;
 }
 
-.buy{
+.buy {
     display: flex;
     justify-content: end;
 }
 
-.buy > button{
+.buy>button {
     padding: 10px 50px;
     border-radius: 30px;
     background-color: white;
@@ -53,3 +54,46 @@ body {
 
 }
 
+.logo-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 200px;
+}
+
+form.d-flex {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.searchContainer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    margin: 10;
+    padding: 20px;
+}
+
+form.d-flex .form-control {
+    border: none;
+    border-radius: 25px 0 0 25px;
+    padding: 10px 15px;
+    box-shadow: none;
+    outline: none;
+    flex: 1;
+    margin-right: 10px 0 0;
+}
+
+form.d-flex .btn {
+    border-radius: 0 25px 25px 0;
+    border: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    background-color: white;
+    color: black;
+}
