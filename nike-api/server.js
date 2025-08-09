@@ -30,6 +30,7 @@ app.get('/api/nike-shoes/:id', (req, res) => {
   });
 });
 
+//lệnh khởi động server
 app.listen(PORT, () => {
   console.log(`Nike Shoes API đang chạy tại http://localhost:${PORT}/api/nike-shoes`);
 });
