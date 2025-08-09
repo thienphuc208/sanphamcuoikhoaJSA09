@@ -2,12 +2,12 @@ const container = document.querySelector(".container");
 const registerBtn = document.querySelector(".register-btn");
 const loginBtn = document.querySelector(".login-btn");
 
+//chuyển trang đăng ký
 registerBtn.addEventListener("click", () => {
     container.classList.add('active');
 });
 
-
-
+//chuyển trang đăng nhập
 loginBtn.addEventListener("click", () => {
     container.classList.remove('active');
 });
@@ -16,8 +16,6 @@ loginBtn.addEventListener("click", () => {
 const emailInput = document.getElementById('email');
 const pwdInput = document.getElementById('pwd');
 const loginForm = document.getElementById('loginForm');
-
-
 
 
 loginForm.addEventListener('submit', (e) => {
